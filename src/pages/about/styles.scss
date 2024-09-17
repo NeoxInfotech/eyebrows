@@ -1,0 +1,117 @@
+.about {
+  background-color: #f3f2ed;
+  .about-us-landing {
+    min-height: 90vh;
+    padding: 0px 60px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.5)),
+      url("../../assets/hero.jpg");
+
+    gap: 20px;
+
+    h1 {
+      font-size: 70px;
+      color: #fff;
+    }
+    h4 {
+      color: #fff;
+      width: 70%;
+    }
+    .view-services {
+      text-decoration: none;
+      color: #fff;
+      background-color: #a8a695;
+      padding: 10px 30px;
+      border-radius: 20px;
+    }
+  }
+  .about-section {
+    min-height: 90vh;
+    display: flex;
+    padding: 20px 60px;
+    .left-column,
+    .right-column {
+      width: 50%;
+      .image {
+        width: 70%;
+        height: 90%;
+        object-fit: cover;
+      }
+    }
+    .left-column {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .right-column {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    .about-us-landing {
+      align-items: center;
+      justify-content: center;
+      h1 {
+        text-align: center;
+      }
+      h4 {
+        width: 95%;
+      }
+    }
+    .about-section {
+      flex-direction: column-reverse;
+      min-height: 90vh;
+      gap: 40px;
+      .left-column,
+      .right-column {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        h1,
+        p {
+          text-align: center;
+        }
+        .image {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .about {
+    .about-us-landing {
+      gap: 30px;
+      padding: 0px 20px;
+      h1 {
+        font-size: 40px;
+      }
+      h4 {
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+    .about-section {
+      padding: 20px 20px;
+      .left-column,
+      .right-column {
+        h1 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
