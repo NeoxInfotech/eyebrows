@@ -42,6 +42,9 @@ const Home = () => {
         ]
 
     };
+    const scrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
     const handleScroll = () => {
         window.scrollTo({ top: 0, behavior: "smooth" })
     }
@@ -73,7 +76,7 @@ const Home = () => {
                     >
                         {heroData.title}
                     </motion.h2>
-                    <Link className='button' to={"/consultancy"}>
+                    <Link className='button' to={"/consultancy"} onClick={scrollToTop}>
                         {heroData.butt}
                     </Link>
                 </div>
@@ -111,9 +114,9 @@ const Home = () => {
                         <p>
                             {expertise.expdesc}
                         </p>
-                        <button>
+                        <Link className='button' to={"/consultancy"} onClick={scrollToTop}>
                             Lets Talk
-                        </button>
+                        </Link>
                     </motion.div>
                 </div>
 
@@ -127,7 +130,7 @@ const Home = () => {
                 >
                     <h2>{about.title}</h2>
                     <p>{about.desc}</p>
-                    <button>Know More About Us</button>
+                    <Link to={"/about"} className='button' onClick={scrollToTop}>Know More About Us</Link>
                 </motion.div>
                 <div className="about-right">
                     <motion.img

@@ -176,13 +176,15 @@
             width: 95%;
           }
         }
-        button {
+        .button {
           width: 120px;
           padding: 8px 15px;
+          text-align: center;
           outline: none;
           border: none;
           background-color: #4e4641;
           color: #fff;
+          text-decoration: none;
         }
       }
     }
@@ -239,13 +241,14 @@
         }
         text-align: center;
       }
-      button {
+      .button {
         outline: none;
         border: none;
         background-color: #4e4641;
         padding: 10px 20px;
         color: #fff;
         border-radius: 20px;
+        text-decoration: none;
       }
     }
   }

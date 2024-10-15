@@ -10,7 +10,13 @@ import { navData } from '../../data/data';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
-
+    const scrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
+    const scrollToTopMenu = () => {
+        setMenuOpen(false)
+        window.scrollTo(0, 0)
+    }
     return (
         <div className='navbar'>
             <div className="logo">
@@ -26,22 +32,22 @@ const Navbar = () => {
                             <Link
                                 className='link'
                                 to={"/"}
-                                onClick={() => setMenuOpen(false)}
+                                onClick={scrollToTopMenu}
                             > Home
                             </Link>
                             <Link
                                 className='link'
                                 to="/about"
-                                onClick={() => setMenuOpen(false)}
+                                onClick={scrollToTopMenu}
                             > About</Link>
                             <Link className='link'
                                 to={"/services"}
-                                onClick={() => setMenuOpen(false)}
+                                onClick={scrollToTopMenu}
                             > Services</Link>
                             <Link
                                 className='link'
                                 to={"/consultancy"}
-                                onClick={() => setMenuOpen(false)}
+                                onClick={scrollToTopMenu}
                             > Consultation</Link>
                         </div>
                     </div> : null
@@ -49,10 +55,10 @@ const Navbar = () => {
 
             </div>
             <div className="links">
-                <Link to={"/"} className='link'> Home</Link>
-                <Link to='/about' className='link'> About</Link>
-                <Link to='/services' className='link'> Services</Link>
-                <Link to='/consultancy' className='link'> Consultation</Link>
+                <Link to={"/"} onClick={scrollToTop} className='link'> Home</Link>
+                <Link to='/about' onClick={scrollToTop} className='link'> About</Link>
+                <Link to='/services' onClick={scrollToTop} className='link'> Services</Link>
+                <Link to='/consultancy' onClick={scrollToTop} className='link'> Consultation</Link>
             </div>
         </div>
     )
